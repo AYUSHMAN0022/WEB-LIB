@@ -1,0 +1,7 @@
+# Connect to InfinityFree using FTP
+open ftp://if0_38302630:WEBLIB724020@ftpupload.net/
+# Force binary mode
+option transfer binary
+# Upload all files
+synchronize remote "C:\xampp\LIBRARY\temp_upload" /htdocs/
+exit

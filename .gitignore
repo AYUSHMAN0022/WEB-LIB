@@ -1,0 +1,30 @@
+# PHP config files with sensitive data
+config/config.php
+config/credentials.php
+
+# Firebase config with sensitive data
+.firebase/
+
+# Dependencies
+node_modules/
+
+# Runtime data
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+
+# Database
+database/*.sql
+
+# User uploaded content
+uploads/
+temp_upload/
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Cache files
+.cache/

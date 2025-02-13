@@ -1,0 +1,88 @@
+Setting up your Library Website on AwardSpace
+=========================================
+
+1. Create AwardSpace Account
+---------------------------
+a. Go to https://www.awardspace.com/
+b. Click "Free Hosting"
+c. Click "Sign Up Now"
+d. Create your free account
+
+2. Create New Website
+-------------------
+a. Log in to your AwardSpace control panel
+b. Go to "Hosting Manager"
+c. Create a new domain or use the free subdomain
+   (e.g., vvit-library.atwebpages.com)
+
+3. Get Database Credentials
+-------------------------
+a. In the control panel, go to "MySQL Databases"
+b. Create a new database
+c. Note down these credentials:
+   - Database Name
+   - Database Username
+   - Database Password
+   - Host (usually fdb34.awardspace.net)
+   - Port: 3306
+
+4. Update Configuration
+----------------------
+a. Open config/config.php
+b. Update these values with your AwardSpace credentials:
+   define('DB_HOST', 'fdb34.awardspace.net');
+   define('DB_USER', 'your_database_username');
+   define('DB_PASS', 'your_database_password');
+   define('DB_NAME', 'your_database_name');
+   
+c. Update site URL:
+   define('SITE_URL', 'http://your-domain.atwebpages.com');
+
+5. Upload Files
+--------------
+a. In AwardSpace control panel, go to "File Manager"
+b. Navigate to public_html
+c. Upload all files from your local LIBRARY folder
+d. Maintain the directory structure
+
+6. Import Database
+----------------
+a. Go to "phpMyAdmin" in control panel
+b. Select your database
+c. Click "Import"
+d. Upload the library.sql file
+
+7. Set File Permissions
+---------------------
+a. In File Manager, set these permissions:
+   - All directories: 755
+   - All files: 644
+   - uploads directory: 777
+
+8. Update Google OAuth
+--------------------
+a. Go to Google Cloud Console
+b. Update the authorized redirect URI to:
+   http://your-domain.atwebpages.com/student/auth_handler.php
+
+9. Test Your Website
+------------------
+Visit these URLs to verify everything is working:
+a. http://your-domain.atwebpages.com/verify_site.php
+b. http://your-domain.atwebpages.com/setup_database.php
+c. http://your-domain.atwebpages.com/developer/login.php
+
+Developer Login Credentials:
+- Username: admin
+- Password: VVITWEBLIB724020
+
+Features included with AwardSpace Free Hosting:
+- 1GB Disk Space
+- Unlimited Bandwidth
+- PHP 8.1 Support
+- MySQL Databases
+- Free Subdomain
+- No Ads
+- 24/7 Support
+
+Need help? Contact AwardSpace support at: https://www.awardspace.com/support/

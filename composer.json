@@ -1,0 +1,11 @@
+{
+    "require": {
+        "google/apiclient": "^2.12.1",
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Library\\": "includes/"
+        }
+    }
+}
